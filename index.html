@@ -8,11 +8,13 @@
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Monsieur+La+Doulaise&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Monsieur+La+Doulaise&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-
     <!-- Page loader -->
     <div class="page-loader" id="pageLoader">
       <div class="loader-logo">
@@ -23,10 +25,14 @@
 
     <!-- Header -->
     <header id="home">
-      <div class="logo">
-        <img src="assets/logo.png" alt="Logan's Cafe Logo" onerror="this.style.display='none'" />
+      <a href="#home" class="logo" aria-label="Logan'sCafe home">
+        <img
+          src="assets/logo.png"
+          alt="Logan's Cafe Logo"
+          onerror="this.style.display = 'none'"
+        />
         <h1>Logan'sCafe</h1>
-      </div>
+      </a>
 
       <button class="mobile-menu-toggle" aria-label="Toggle menu">
         <span></span>
@@ -36,7 +42,7 @@
 
       <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
+          <li><a href="#home" class="active-link">Home</a></li>
           <li><a href="#menu">Menu</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#process">Our Process</a></li>
@@ -44,7 +50,7 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-btn">
-          <button class="dy-btn">Order Now</button>
+          <a href="#menu" class="dy-btn">Order Now</a>
         </div>
       </nav>
     </header>
@@ -52,39 +58,92 @@
     <!-- Hero -->
     <div class="banner">
       <!-- Parallax image layers -->
-      <div class="banner-img" style="background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1600&q=80&auto=format&fit=crop')"></div>
+      <div
+        class="banner-img"
+        style="
+          background-image: url(&quot;https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1600&q=80&auto=format&fit=crop&quot;);
+        "
+      ></div>
       <div class="banner-overlay"></div>
       <div class="banner-grain"></div>
 
       <main>
         <div class="intro fade">
           <span class="eyebrow">Est. 2024 · Specialty Coffee</span>
-          <h2>Your Cozy Corner<br><em>for Coffee Perfection</em></h2>
+          <h2>Your Cozy Corner<br /><em>for Coffee Perfection</em></h2>
           <p class="description">
             Logan'sCafe is your everyday escape for rich coffee, fresh pastries,
             and calm vibes. Whether you're starting your morning or taking a
             break from the rush, we're here to make every cup feel like home.
           </p>
           <div class="hero-actions">
-            <button class="dy-btn" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">Explore Our Menu</button>
+            <button
+              class="dy-btn"
+              onclick="
+                document
+                  .getElementById('menu')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
+            >
+              Explore Our Menu
+            </button>
             <a href="#about" class="ghost-link">Our Story ↓</a>
           </div>
           <div class="socials">
             <ul>
-              <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li>
-              <li><a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
-              <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></li>
-              <li><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+              <li>
+                <a href="#" aria-label="Instagram"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg
+                ></a>
+              </li>
+              <li>
+                <a href="#" aria-label="Twitter"
+                  ><svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                    /></svg
+                ></a>
+              </li>
+              <li>
+                <a href="#" aria-label="Facebook"
+                  ><svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                    /></svg
+                ></a>
+              </li>
+              <li>
+                <a href="#" aria-label="LinkedIn"
+                  ><svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                    /></svg
+                ></a>
+              </li>
             </ul>
           </div>
           <p class="note">
-            Logan'sCafe is not a real cafe. This site is made for practice and to showcase web development skills.
+            Logan'sCafe is not a real cafe. This site is made for practice and
+            to showcase web development skills.
           </p>
         </div>
 
         <!-- Floating hero image card -->
         <div class="hero-float-card fade">
-          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=80&auto=format&fit=crop" alt="Coffee art" />
+          <img
+            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=80&auto=format&fit=crop"
+            alt="Coffee art"
+          />
           <div class="hero-float-info">
             <span class="hero-float-label">Today's Special</span>
             <strong>Vanilla Cloud Latte</strong>
@@ -99,7 +158,7 @@
     </div>
 
     <!-- Stats Bar -->
-    <div class="stats-bar fade">
+    <div class="stats-bar">
       <div class="stat">
         <strong class="counter" data-target="500">0</strong><strong>+</strong>
         <span>Daily Cups</span>
@@ -124,7 +183,7 @@
     <!-- Featured Menu -->
     <section class="menu" id="menu">
       <div class="section-header fade">
-        <span class="eyebrow" style="color:#b89060">Our Menu</span>
+        <span class="eyebrow" style="color: #b89060">Our Menu</span>
         <h2>Featured</h2>
         <p class="section-subtitle">A few things we're known for</p>
       </div>
@@ -141,13 +200,19 @@
         <!-- Coffee -->
         <div class="card" data-category="coffee">
           <div class="card-img-wrap">
-            <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=500&q=80&auto=format&fit=crop" alt="Espresso" />
+            <img
+              src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=500&q=80&auto=format&fit=crop"
+              alt="Espresso"
+            />
             <div class="card-badge">Popular</div>
           </div>
           <div class="card-content">
             <div class="card-tag">Coffee</div>
             <h3>Espresso</h3>
-            <p>Rich and bold espresso made from freshly ground single-origin beans.</p>
+            <p>
+              Rich and bold espresso made from freshly ground single-origin
+              beans.
+            </p>
             <div class="card-footer">
               <span class="price">$3.50</span>
               <button class="dy-btn">Order</button>
@@ -157,12 +222,17 @@
 
         <div class="card" data-category="coffee">
           <div class="card-img-wrap">
-            <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=500&q=80&auto=format&fit=crop" alt="Cappuccino" />
+            <img
+              src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=500&q=80&auto=format&fit=crop"
+              alt="Cappuccino"
+            />
           </div>
           <div class="card-content">
             <div class="card-tag">Coffee</div>
             <h3>Cappuccino</h3>
-            <p>Creamy cappuccino topped with silky froth and a dusting of cocoa.</p>
+            <p>
+              Creamy cappuccino topped with silky froth and a dusting of cocoa.
+            </p>
             <div class="card-footer">
               <span class="price">$4.50</span>
               <button class="dy-btn">Order</button>
@@ -172,13 +242,19 @@
 
         <div class="card" data-category="coffee">
           <div class="card-img-wrap">
-            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&q=80&auto=format&fit=crop" alt="Flat White" />
+            <img
+              src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&q=80&auto=format&fit=crop"
+              alt="Flat White"
+            />
             <div class="card-badge new-badge">New</div>
           </div>
           <div class="card-content">
             <div class="card-tag">Coffee</div>
             <h3>Flat White</h3>
-            <p>Smooth, velvety espresso with microfoam milk — the barista's choice.</p>
+            <p>
+              Smooth, velvety espresso with microfoam milk — the barista's
+              choice.
+            </p>
             <div class="card-footer">
               <span class="price">$4.00</span>
               <button class="dy-btn">Order</button>
@@ -189,12 +265,18 @@
         <!-- Cold -->
         <div class="card" data-category="cold">
           <div class="card-img-wrap">
-            <img src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?w=500&q=80&auto=format&fit=crop" alt="Cold Brew" />
+            <img
+              src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?w=500&q=80&auto=format&fit=crop"
+              alt="Cold Brew"
+            />
           </div>
           <div class="card-content">
             <div class="card-tag">Cold Drinks</div>
             <h3>Cold Brew</h3>
-            <p>12-hour slow-steeped coffee served over ice — bold, smooth, refreshing.</p>
+            <p>
+              12-hour slow-steeped coffee served over ice — bold, smooth,
+              refreshing.
+            </p>
             <div class="card-footer">
               <span class="price">$5.00</span>
               <button class="dy-btn">Order</button>
@@ -204,13 +286,19 @@
 
         <div class="card" data-category="cold">
           <div class="card-img-wrap">
-            <img src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=500&q=80&auto=format&fit=crop" alt="Iced Matcha Latte" />
+            <img
+              src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=500&q=80&auto=format&fit=crop"
+              alt="Iced Matcha Latte"
+            />
             <div class="card-badge">Fan Fav</div>
           </div>
           <div class="card-content">
             <div class="card-tag">Cold Drinks</div>
             <h3>Iced Matcha Latte</h3>
-            <p>Ceremonial grade matcha whisked with oat milk and ice — earthy and sweet.</p>
+            <p>
+              Ceremonial grade matcha whisked with oat milk and ice — earthy and
+              sweet.
+            </p>
             <div class="card-footer">
               <span class="price">$5.50</span>
               <button class="dy-btn">Order</button>
@@ -221,12 +309,18 @@
         <!-- Pastry -->
         <div class="card" data-category="pastry">
           <div class="card-img-wrap">
-            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500&q=80&auto=format&fit=crop" alt="Butter Croissant" />
+            <img
+              src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500&q=80&auto=format&fit=crop"
+              alt="Butter Croissant"
+            />
           </div>
           <div class="card-content">
             <div class="card-tag">Pastry</div>
             <h3>Butter Croissant</h3>
-            <p>Flaky, golden croissant baked fresh every morning — the perfect pairing.</p>
+            <p>
+              Flaky, golden croissant baked fresh every morning — the perfect
+              pairing.
+            </p>
             <div class="card-footer">
               <span class="price">$3.00</span>
               <button class="dy-btn">Order</button>
@@ -236,13 +330,19 @@
 
         <div class="card" data-category="pastry">
           <div class="card-img-wrap">
-            <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=500&q=80&auto=format&fit=crop" alt="Cinnamon Roll" />
+            <img
+              src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=500&q=80&auto=format&fit=crop"
+              alt="Cinnamon Roll"
+            />
             <div class="card-badge new-badge">New</div>
           </div>
           <div class="card-content">
             <div class="card-tag">Pastry</div>
             <h3>Cinnamon Roll</h3>
-            <p>Soft, gooey cinnamon rolls glazed with cream cheese frosting. Warm from the oven.</p>
+            <p>
+              Soft, gooey cinnamon rolls glazed with cream cheese frosting. Warm
+              from the oven.
+            </p>
             <div class="card-footer">
               <span class="price">$3.75</span>
               <button class="dy-btn">Order</button>
@@ -252,12 +352,18 @@
 
         <div class="card" data-category="pastry">
           <div class="card-img-wrap">
-            <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=500&q=80&auto=format&fit=crop" alt="Almond Tart" />
+            <img
+              src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=500&q=80&auto=format&fit=crop"
+              alt="Almond Tart"
+            />
           </div>
           <div class="card-content">
             <div class="card-tag">Pastry</div>
             <h3>Almond Tart</h3>
-            <p>Crisp pastry shell filled with silky frangipane, topped with toasted almonds.</p>
+            <p>
+              Crisp pastry shell filled with silky frangipane, topped with
+              toasted almonds.
+            </p>
             <div class="card-footer">
               <span class="price">$4.25</span>
               <button class="dy-btn">Order</button>
@@ -273,7 +379,7 @@
     <div class="bg-img">
       <article class="about fade" id="about">
         <div class="about-inner">
-          <span class="eyebrow" style="color:#d9b688">Our Story</span>
+          <span class="eyebrow" style="color: #d9b688">Our Story</span>
           <h2>About Us</h2>
           <p>
             At Logan'sCafe, we are passionate about delivering the finest coffee
@@ -291,26 +397,80 @@
     <!-- Gallery Strip -->
     <div class="gallery-strip" aria-label="Cafe gallery">
       <div class="gallery-track">
-        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&q=75&auto=format&fit=crop" alt="Cafe interior" loading="lazy" />
-        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=400&q=75&auto=format&fit=crop" alt="Coffee pour" loading="lazy" />
-        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400&q=75&auto=format&fit=crop" alt="Latte art" loading="lazy" />
-        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=75&auto=format&fit=crop" alt="Coffee beans" loading="lazy" />
-        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=75&auto=format&fit=crop" alt="Espresso" loading="lazy" />
-        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=75&auto=format&fit=crop" alt="Flat white" loading="lazy" />
+        <img
+          src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&q=75&auto=format&fit=crop"
+          alt="Cafe interior"
+          loading="lazy"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=400&q=75&auto=format&fit=crop"
+          alt="Coffee pour"
+          loading="lazy"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400&q=75&auto=format&fit=crop"
+          alt="Latte art"
+          loading="lazy"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=75&auto=format&fit=crop"
+          alt="Coffee beans"
+          loading="lazy"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=75&auto=format&fit=crop"
+          alt="Espresso"
+          loading="lazy"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=75&auto=format&fit=crop"
+          alt="Flat white"
+          loading="lazy"
+        />
         <!-- Duplicated for seamless loop -->
-        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&q=75&auto=format&fit=crop" alt="Cafe interior" loading="lazy" aria-hidden="true" />
-        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=400&q=75&auto=format&fit=crop" alt="Coffee pour" loading="lazy" aria-hidden="true" />
-        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400&q=75&auto=format&fit=crop" alt="Latte art" loading="lazy" aria-hidden="true" />
-        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=75&auto=format&fit=crop" alt="Coffee beans" loading="lazy" aria-hidden="true" />
-        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=75&auto=format&fit=crop" alt="Espresso" loading="lazy" aria-hidden="true" />
-        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=75&auto=format&fit=crop" alt="Flat white" loading="lazy" aria-hidden="true" />
+        <img
+          src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&q=75&auto=format&fit=crop"
+          alt="Cafe interior"
+          loading="lazy"
+          aria-hidden="true"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=400&q=75&auto=format&fit=crop"
+          alt="Coffee pour"
+          loading="lazy"
+          aria-hidden="true"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400&q=75&auto=format&fit=crop"
+          alt="Latte art"
+          loading="lazy"
+          aria-hidden="true"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=75&auto=format&fit=crop"
+          alt="Coffee beans"
+          loading="lazy"
+          aria-hidden="true"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=75&auto=format&fit=crop"
+          alt="Espresso"
+          loading="lazy"
+          aria-hidden="true"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=75&auto=format&fit=crop"
+          alt="Flat white"
+          loading="lazy"
+          aria-hidden="true"
+        />
       </div>
     </div>
 
     <!-- Our Process -->
     <section class="process" id="process">
       <div class="section-header fade">
-        <span class="eyebrow" style="color:#b89060">From Seed to Cup</span>
+        <span class="eyebrow" style="color: #b89060">From Seed to Cup</span>
         <h2>Our Process</h2>
         <p class="section-subtitle">How every cup earns its name</p>
       </div>
@@ -318,31 +478,55 @@
         <div class="process-step fade">
           <div class="step-number">01</div>
           <div class="step-img">
-            <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=500&q=80&auto=format&fit=crop" alt="Coffee sourcing" loading="lazy" />
+            <img
+              src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=500&q=80&auto=format&fit=crop"
+              alt="Coffee sourcing"
+              loading="lazy"
+            />
           </div>
           <div class="step-text">
             <h3>Ethical Sourcing</h3>
-            <p>We partner directly with small farms in Ethiopia, Colombia, and Guatemala — paying above fair-trade prices and building long-term relationships.</p>
+            <p>
+              We partner directly with small farms in Ethiopia, Colombia, and
+              Guatemala — paying above fair-trade prices and building long-term
+              relationships.
+            </p>
           </div>
         </div>
         <div class="process-step fade">
           <div class="step-number">02</div>
           <div class="step-img">
-            <img src="https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=500&q=80&auto=format&fit=crop" alt="Coffee roasting" loading="lazy" />
+            <img
+              src="https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=500&q=80&auto=format&fit=crop"
+              alt="Coffee roasting"
+              loading="lazy"
+            />
           </div>
           <div class="step-text">
             <h3>Artisan Roasting</h3>
-            <p>Beans are roasted weekly in small batches to a precise profile — unlocking every note of chocolate, fruit, and florals the origin has to offer.</p>
+            <p>
+              Beans are roasted weekly in small batches to a precise profile —
+              unlocking every note of chocolate, fruit, and florals the origin
+              has to offer.
+            </p>
           </div>
         </div>
         <div class="process-step fade">
           <div class="step-number">03</div>
           <div class="step-img">
-            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&q=80&auto=format&fit=crop" alt="Coffee brewing" loading="lazy" />
+            <img
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&q=80&auto=format&fit=crop"
+              alt="Coffee brewing"
+              loading="lazy"
+            />
           </div>
           <div class="step-text">
             <h3>Expert Brewing</h3>
-            <p>Our baristas are trained to extract with precision — dialling grind, dose, and temp for every single shot so your cup is never ordinary.</p>
+            <p>
+              Our baristas are trained to extract with precision — dialling
+              grind, dose, and temp for every single shot so your cup is never
+              ordinary.
+            </p>
           </div>
         </div>
       </div>
@@ -351,14 +535,17 @@
     <!-- Testimonials -->
     <section class="testimonials" id="reviews">
       <div class="section-header fade">
-        <span class="eyebrow" style="color:#b89060">Reviews</span>
+        <span class="eyebrow" style="color: #b89060">Reviews</span>
         <h2>What People Say</h2>
         <p class="section-subtitle">Straight from our regulars</p>
       </div>
       <div class="testimonial-grid">
         <div class="testimonial-card fade">
           <div class="stars">★★★★★</div>
-          <p>"Best espresso I've had outside of Italy. The atmosphere is perfect for working or catching up with a friend."</p>
+          <p>
+            "Best espresso I've had outside of Italy. The atmosphere is perfect
+            for working or catching up with a friend."
+          </p>
           <div class="reviewer">
             <div class="reviewer-avatar">A</div>
             <div>
@@ -369,7 +556,10 @@
         </div>
         <div class="testimonial-card featured-testimonial fade">
           <div class="stars">★★★★★</div>
-          <p>"Logan's has become my morning ritual. The butter croissants are dangerously good — I haven't been able to order anything else."</p>
+          <p>
+            "Logan's has become my morning ritual. The butter croissants are
+            dangerously good — I haven't been able to order anything else."
+          </p>
           <div class="reviewer">
             <div class="reviewer-avatar">S</div>
             <div>
@@ -380,7 +570,10 @@
         </div>
         <div class="testimonial-card fade">
           <div class="stars">★★★★★</div>
-          <p>"Cozy, warm, and the staff always remember your order. It genuinely feels like a neighbourhood gem."</p>
+          <p>
+            "Cozy, warm, and the staff always remember your order. It genuinely
+            feels like a neighbourhood gem."
+          </p>
           <div class="reviewer">
             <div class="reviewer-avatar">J</div>
             <div>
@@ -391,7 +584,10 @@
         </div>
         <div class="testimonial-card fade">
           <div class="stars">★★★★★</div>
-          <p>"The cold brew alone is worth the trip. Rich, smooth, never bitter. I've tried them all — Logan's wins."</p>
+          <p>
+            "The cold brew alone is worth the trip. Rich, smooth, never bitter.
+            I've tried them all — Logan's wins."
+          </p>
           <div class="reviewer">
             <div class="reviewer-avatar">P</div>
             <div>
@@ -402,7 +598,10 @@
         </div>
         <div class="testimonial-card fade">
           <div class="stars">★★★★★</div>
-          <p>"I work remotely and this place is my second office. Fast WiFi, great music, zero rush — absolute perfection."</p>
+          <p>
+            "I work remotely and this place is my second office. Fast WiFi,
+            great music, zero rush — absolute perfection."
+          </p>
           <div class="reviewer">
             <div class="reviewer-avatar">D</div>
             <div>
@@ -413,7 +612,10 @@
         </div>
         <div class="testimonial-card featured-testimonial fade">
           <div class="stars">★★★★★</div>
-          <p>"The cinnamon rolls just landed on the menu and they're already my favourite thing in town. Warm, gooey, perfect."</p>
+          <p>
+            "The cinnamon rolls just landed on the menu and they're already my
+            favourite thing in town. Warm, gooey, perfect."
+          </p>
           <div class="reviewer">
             <div class="reviewer-avatar">M</div>
             <div>
@@ -428,52 +630,151 @@
     <!-- Services / Why Us -->
     <section class="services" id="services">
       <div class="section-header fade">
-        <span class="eyebrow" style="color:#b89060">Why Us</span>
+        <span class="eyebrow" style="color: #b89060">Why Us</span>
         <h2>What Makes Logan's Different</h2>
         <p class="section-subtitle">More than just a coffee shop</p>
       </div>
       <div class="services-cards">
         <div class="s-card-content fade">
           <h3>
-            <svg fill="#f5efe6" viewBox="0 0 326.05 326.05" xmlns="http://www.w3.org/2000/svg"><g><path d="M237.542,175.003c1.922-4.375,2.958-9.189,2.958-14.25v-17.806c0-20.058-16.317-36.375-36.375-36.375h-77.25 c-20.058,0-36.375,16.317-36.375,36.375v17.806c0,5.061,1.036,9.875,2.959,14.25H237.542z M162.875,157.719 c-5.17,0-9.363-4.193-9.363-9.363s4.193-9.363,9.363-9.363c5.171,0,9.363,4.193,9.363,9.363S168.046,157.719,162.875,157.719z"/><path d="M256.625,181.628c-4.656,9.178-14.197,15.375-25.083,15.375h-12.584v42.75h-112.5v-42.75H93.875 c-10.886,0-20.428-6.197-25.083-15.375H49.125v72.75c0,12.703,10.297,23,23,23H261.5c12.703,0,23-10.297,23-23v-72.75H256.625z"/></g></svg>
+            <svg
+              fill="#f5efe6"
+              viewBox="0 0 326.05 326.05"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <path
+                  d="M237.542,175.003c1.922-4.375,2.958-9.189,2.958-14.25v-17.806c0-20.058-16.317-36.375-36.375-36.375h-77.25 c-20.058,0-36.375,16.317-36.375,36.375v17.806c0,5.061,1.036,9.875,2.959,14.25H237.542z M162.875,157.719 c-5.17,0-9.363-4.193-9.363-9.363s4.193-9.363,9.363-9.363c5.171,0,9.363,4.193,9.363,9.363S168.046,157.719,162.875,157.719z"
+                />
+                <path
+                  d="M256.625,181.628c-4.656,9.178-14.197,15.375-25.083,15.375h-12.584v42.75h-112.5v-42.75H93.875 c-10.886,0-20.428-6.197-25.083-15.375H49.125v72.75c0,12.703,10.297,23,23,23H261.5c12.703,0,23-10.297,23-23v-72.75H256.625z"
+                />
+              </g>
+            </svg>
             Premium Quality Beans
           </h3>
-          <p>We source single-origin beans from ethical farms around the world, roasted fresh weekly.</p>
+          <p>
+            We source single-origin beans from ethical farms around the world,
+            roasted fresh weekly.
+          </p>
         </div>
         <div class="s-card-content fade">
           <h3>
-            <svg fill="#f5efe6" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><path d="M35.777344 19.71875L30.28125 14.222656C29.910156 13.847656 29.3125 13.828125 28.914063 14.175781L5.148438 35.050781C4.855469 35.308594 4.738281 35.71875 4.851563 36.089844 4.882813 36.195313 5.644531 38.652344 8.496094 41.503906 11.347656 44.355469 13.804688 45.117188 13.90625 45.148438 14.003906 45.179688 14.101563 45.191406 14.195313 45.191406 14.480469 45.191406 14.753906 45.070313 14.945313 44.851563L35.824219 21.085938C36.171875 20.6875 36.152344 20.089844 35.777344 19.71875zM26.828125 13.347656L4.929688 32.582031C1.863281 28.121094 1.066406 25.09375 1.03125 24.945313.925781 24.523438 1.101563 24.085938 1.46875 23.855469L22.867188 10.484375C23.265625 10.238281 23.777344 10.296875 24.105469 10.625z"/></svg>
+            <svg
+              fill="#f5efe6"
+              viewBox="0 0 50 50"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M35.777344 19.71875L30.28125 14.222656C29.910156 13.847656 29.3125 13.828125 28.914063 14.175781L5.148438 35.050781C4.855469 35.308594 4.738281 35.71875 4.851563 36.089844 4.882813 36.195313 5.644531 38.652344 8.496094 41.503906 11.347656 44.355469 13.804688 45.117188 13.90625 45.148438 14.003906 45.179688 14.101563 45.191406 14.195313 45.191406 14.480469 45.191406 14.753906 45.070313 14.945313 44.851563L35.824219 21.085938C36.171875 20.6875 36.152344 20.089844 35.777344 19.71875zM26.828125 13.347656L4.929688 32.582031C1.863281 28.121094 1.066406 25.09375 1.03125 24.945313.925781 24.523438 1.101563 24.085938 1.46875 23.855469L22.867188 10.484375C23.265625 10.238281 23.777344 10.296875 24.105469 10.625z"
+              />
+            </svg>
             Fresh Pastries Daily
           </h3>
-          <p>Baked in-house every morning — from buttery croissants to seasonal favourites straight from the oven.</p>
+          <p>
+            Baked in-house every morning — from buttery croissants to seasonal
+            favourites straight from the oven.
+          </p>
         </div>
         <div class="s-card-content fade">
           <h3>
-            <svg height="200px" width="200px" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 502.648 502.648" fill="#f5efe6"><g><g><g><circle style="fill:#f5efe6" cx="250.399" cy="91.549" r="58.694"></circle><path style="fill:#f5efe6" d="M455.861,253.028l-54.703-11.411c-18.637-3.904-37.037,4.638-46.765,19.824 c-9.448-4.853-19.608-9.038-30.415-12.511v-32.529c0.022-24.612-20.126-44.738-44.651-44.738h-55.933 c-24.655,0-44.716,20.126-44.716,44.738v32.701c-10.699,3.408-20.751,7.593-30.264,12.468 c-9.728-15.251-28.15-23.857-46.809-19.953l-54.747,11.411c-24.03,5.026-39.626,28.862-34.6,52.978l13.741,65.64 c4.983,24.051,28.84,39.647,52.892,34.621l17.321-3.624c8.671,12.813,20.665,24.569,36.023,34.621 c31.989,20.967,74.247,32.529,119.092,32.529c68.617,0,127.721-27.589,154.943-67.215l17.602,3.689 c24.03,5.004,47.887-10.57,52.87-34.621l13.762-65.64C495.508,281.89,479.912,258.054,455.861,253.028z"/></g></g></g></svg>
+            <svg
+              height="200px"
+              width="200px"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 502.648 502.648"
+              fill="#f5efe6"
+            >
+              <g>
+                <g>
+                  <g>
+                    <circle
+                      style="fill: #f5efe6"
+                      cx="250.399"
+                      cy="91.549"
+                      r="58.694"
+                    ></circle>
+                    <path
+                      style="fill: #f5efe6"
+                      d="M455.861,253.028l-54.703-11.411c-18.637-3.904-37.037,4.638-46.765,19.824 c-9.448-4.853-19.608-9.038-30.415-12.511v-32.529c0.022-24.612-20.126-44.738-44.651-44.738h-55.933 c-24.655,0-44.716,20.126-44.716,44.738v32.701c-10.699,3.408-20.751,7.593-30.264,12.468 c-9.728-15.251-28.15-23.857-46.809-19.953l-54.747,11.411c-24.03,5.026-39.626,28.862-34.6,52.978l13.741,65.64 c4.983,24.051,28.84,39.647,52.892,34.621l17.321-3.624c8.671,12.813,20.665,24.569,36.023,34.621 c31.989,20.967,74.247,32.529,119.092,32.529c68.617,0,127.721-27.589,154.943-67.215l17.602,3.689 c24.03,5.004,47.887-10.57,52.87-34.621l13.762-65.64C495.508,281.89,479.912,258.054,455.861,253.028z"
+                    />
+                  </g>
+                </g>
+              </g>
+            </svg>
             Community Driven
           </h3>
-          <p>More than a coffee shop — a place where neighbours meet, ideas spark, and everyone belongs.</p>
+          <p>
+            More than a coffee shop — a place where neighbours meet, ideas
+            spark, and everyone belongs.
+          </p>
         </div>
         <div class="s-card-content fade">
           <h3>
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f5efe6" stroke="#f5efe6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                fill="#f5efe6"
+                stroke="#f5efe6"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
             Loyalty Rewards
           </h3>
-          <p>Every cup earns you points. Regulars enjoy free drinks, early access to specials, and member perks.</p>
+          <p>
+            Every cup earns you points. Regulars enjoy free drinks, early access
+            to specials, and member perks.
+          </p>
         </div>
         <div class="s-card-content fade">
           <h3>
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#f5efe6"><path d="M12.8324 21.8013C15.9583 21.1747 20 18.926 20 13.1112C20 7.8196 16.1267 4.29593 13.3415 2.67685C12.7235 2.31757 12 2.79006 12 3.50492V5.3334C12 6.77526 11.3938 9.40711 9.70932 10.5018C8.84932 11.0607 7.92052 10.2242 7.816 9.20388L7.73017 8.36604C7.6304 7.39203 6.63841 6.80075 5.85996 7.3946C4.46147 8.46144 3 10.3296 3 13.1112C3 20.2223 8.28889 22.0001 10.9333 22.0001C11.0871 22.0001 11.2488 21.9955 11.4171 21.9858C10.1113 21.8742 8 21.064 8 18.4442C8 16.3949 9.49507 15.0085 10.631 14.3346C10.9365 14.1533 11.2941 14.3887 11.2941 14.7439V15.3331C11.2941 15.784 11.4685 16.4889 11.8836 16.9714C12.3534 17.5174 13.0429 16.9454 13.0985 16.2273C13.1161 16.0008 13.3439 15.8564 13.5401 15.9711C14.1814 16.3459 15 17.1465 15 18.4442C15 20.4922 13.871 21.4343 12.8324 21.8013Z" fill="#f5efe6"/></svg>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#f5efe6"
+            >
+              <path
+                d="M12.8324 21.8013C15.9583 21.1747 20 18.926 20 13.1112C20 7.8196 16.1267 4.29593 13.3415 2.67685C12.7235 2.31757 12 2.79006 12 3.50492V5.3334C12 6.77526 11.3938 9.40711 9.70932 10.5018C8.84932 11.0607 7.92052 10.2242 7.816 9.20388L7.73017 8.36604C7.6304 7.39203 6.63841 6.80075 5.85996 7.3946C4.46147 8.46144 3 10.3296 3 13.1112C3 20.2223 8.28889 22.0001 10.9333 22.0001C11.0871 22.0001 11.2488 21.9955 11.4171 21.9858C10.1113 21.8742 8 21.064 8 18.4442C8 16.3949 9.49507 15.0085 10.631 14.3346C10.9365 14.1533 11.2941 14.3887 11.2941 14.7439V15.3331C11.2941 15.784 11.4685 16.4889 11.8836 16.9714C12.3534 17.5174 13.0429 16.9454 13.0985 16.2273C13.1161 16.0008 13.3439 15.8564 13.5401 15.9711C14.1814 16.3459 15 17.1465 15 18.4442C15 20.4922 13.871 21.4343 12.8324 21.8013Z"
+                fill="#f5efe6"
+              />
+            </svg>
             Fast & Friendly Service
           </h3>
-          <p>Our team moves quickly without cutting corners — your order arrives right and on time, every time.</p>
+          <p>
+            Our team moves quickly without cutting corners — your order arrives
+            right and on time, every time.
+          </p>
         </div>
         <div class="s-card-content fade">
           <h3>
-            <svg viewBox="0 0 24 24" fill="none" stroke="#f5efe6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="#f5efe6"/></svg>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#f5efe6"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                fill="#f5efe6"
+              />
+            </svg>
             Free Wi-Fi
           </h3>
-          <p>Stay connected, stay comfortable. High-speed Wi-Fi and plenty of power outlets for remote workers.</p>
+          <p>
+            Stay connected, stay comfortable. High-speed Wi-Fi and plenty of
+            power outlets for remote workers.
+          </p>
         </div>
       </div>
     </section>
@@ -482,12 +783,20 @@
     <section class="newsletter fade">
       <div class="newsletter-inner">
         <div class="newsletter-text">
-          <span class="eyebrow" style="color:#d9b688">Stay in the loop</span>
-          <h2 style="color:#f5efe6">Get the Weekly Roast</h2>
-          <p>New seasonal specials, barista tips, and loyalty deals — straight to your inbox.</p>
+          <span class="eyebrow" style="color: #d9b688">Stay in the loop</span>
+          <h2 style="color: #f5efe6">Get the Weekly Roast</h2>
+          <p>
+            New seasonal specials, barista tips, and loyalty deals — straight to
+            your inbox.
+          </p>
         </div>
         <div class="newsletter-form">
-          <input type="email" class="newsletter-input" placeholder="your@email.com" aria-label="Email address" />
+          <input
+            type="email"
+            class="newsletter-input"
+            placeholder="your@email.com"
+            aria-label="Email address"
+          />
           <button class="dy-btn newsletter-submit">Subscribe</button>
         </div>
       </div>
@@ -496,17 +805,30 @@
     <!-- CTA / Contact -->
     <section class="cta fade" id="contact">
       <div class="cta-inner">
-        <span class="eyebrow" style="color:#40220b;opacity:0.65">Open 7am – 9pm, Every Day</span>
+        <span class="eyebrow" style="color: #40220b; opacity: 0.65"
+          >Open 7am – 9pm, Every Day</span
+        >
         <h2>Come Say Hello</h2>
-        <p>Stop by Logan'sCafe and make your day better — one cup at a time. We're always happy to see a new face.</p>
+        <p>
+          Stop by Logan'sCafe and make your day better — one cup at a time.
+          We're always happy to see a new face.
+        </p>
         <div class="cta-actions">
           <button class="dy-btn">Find Us</button>
-          <a href="mailto:hello@loganscafe.com" class="cta-email">hello@loganscafe.com</a>
+          <a href="mailto:hello@loganscafe.com" class="cta-email"
+            >hello@loganscafe.com</a
+          >
         </div>
         <div class="cta-hours">
-          <div class="hour-row"><span>Monday – Friday</span><span>7:00am – 9:00pm</span></div>
-          <div class="hour-row"><span>Saturday</span><span>8:00am – 9:00pm</span></div>
-          <div class="hour-row"><span>Sunday</span><span>9:00am – 7:00pm</span></div>
+          <div class="hour-row">
+            <span>Monday – Friday</span><span>7:00am – 9:00pm</span>
+          </div>
+          <div class="hour-row">
+            <span>Saturday</span><span>8:00am – 9:00pm</span>
+          </div>
+          <div class="hour-row">
+            <span>Sunday</span><span>9:00am – 7:00pm</span>
+          </div>
         </div>
       </div>
     </section>
@@ -516,15 +838,47 @@
       <div class="footer-top">
         <div class="footer-brand">
           <div class="logo">
-            <img src="assets/logo.png" alt="Logan's Cafe Logo" onerror="this.style.display='none'" />
+            <img
+              src="assets/logo.png"
+              alt="Logan's Cafe Logo"
+              onerror="this.style.display = 'none'"
+            />
             <h1>Logan'sCafe</h1>
           </div>
           <p class="footer-tagline">Crafted with care, served with love.</p>
           <div class="socials">
             <ul>
-              <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li>
-              <li><a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
-              <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></li>
+              <li>
+                <a href="#" aria-label="Instagram"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg
+                ></a>
+              </li>
+              <li>
+                <a href="#" aria-label="Twitter"
+                  ><svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                    /></svg
+                ></a>
+              </li>
+              <li>
+                <a href="#" aria-label="Facebook"
+                  ><svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                    /></svg
+                ></a>
+              </li>
             </ul>
           </div>
         </div>
@@ -544,9 +898,27 @@
           <div class="footer-col">
             <h4>Credits</h4>
             <ul>
-              <li><a href="https://www.svgrepo.com/" target="_blank" rel="noopener">SVG icons — SVG Repo</a></li>
-              <li><a href="https://unsplash.com/" target="_blank" rel="noopener">Photos — Unsplash</a></li>
-              <li><a href="https://fonts.google.com/" target="_blank" rel="noopener">Fonts — Google Fonts</a></li>
+              <li>
+                <a
+                  href="https://www.svgrepo.com/"
+                  target="_blank"
+                  rel="noopener"
+                  >SVG icons — SVG Repo</a
+                >
+              </li>
+              <li>
+                <a href="https://unsplash.com/" target="_blank" rel="noopener"
+                  >Photos — Unsplash</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://fonts.google.com/"
+                  target="_blank"
+                  rel="noopener"
+                  >Fonts — Google Fonts</a
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -554,13 +926,24 @@
 
       <div class="footer-bottom">
         <p>&copy; 2026 Logan'sCafe. All rights reserved.</p>
-        <p class="footer-note">Made with ☕ by MystiqDev — A fictional practice project.</p>
+        <p class="footer-note">
+          Made with ☕ by MystiqDev — A fictional practice project.
+        </p>
       </div>
     </footer>
 
     <!-- Back to top button -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="18 15 12 9 6 15" />
+      </svg>
     </button>
 
     <script src="script.js"></script>

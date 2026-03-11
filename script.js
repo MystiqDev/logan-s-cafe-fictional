@@ -69,28 +69,6 @@ document.querySelectorAll(".fade").forEach(el => fadeObserver.observe(el));
 
 
 /* =============================================
-   ACTIVE NAV LINK ON SCROLL
-   ============================================= */
-const sections = document.querySelectorAll("section[id], div[id], article[id], header[id]");
-const navLinks = document.querySelectorAll("nav ul li a");
-
-const sectionObserver = new IntersectionObserver(
-    entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                navLinks.forEach(link => link.classList.remove("active-link"));
-                const active = document.querySelector(`nav ul li a[href="#${entry.target.id}"]`);
-                if (active) active.classList.add("active-link");
-            }
-        });
-    },
-    { threshold: 0.4 }
-);
-
-sections.forEach(s => sectionObserver.observe(s));
-
-
-/* =============================================
    MENU TAB FILTER
    ============================================= */
 const tabBtns = document.querySelectorAll(".tab-btn");
