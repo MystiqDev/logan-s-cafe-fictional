@@ -194,6 +194,7 @@
         <button class="tab-btn" data-tab="coffee">Coffee</button>
         <button class="tab-btn" data-tab="cold">Cold Drinks</button>
         <button class="tab-btn" data-tab="pastry">Pastries</button>
+        <button class="tab-btn" data-tab="favourites">♥ Favourites</button>
       </div>
 
       <div class="cards">
@@ -815,8 +816,7 @@
         </p>
         <div class="cta-actions">
           <button class="dy-btn">Find Us</button>
-          <a href="mailto:hello@loganscafe.com" class="cta-email"
-            >hello@loganscafe.com</a
+          <a href="/cdn-cgi/l/email-protection#1d75787171725d71727a7c736e7e7c7b78337e7270" class="cta-email"><span class="__cf_email__" data-cfemail="0b636e6767644b67646c6a6578686a6d6e25686466">[email&#160;protected]</span></a
           >
         </div>
         <div class="cta-hours">
@@ -934,16 +934,16 @@
 
     <!-- Back to top button -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <polyline points="18 15 12 9 6 15" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"/>
       </svg>
+    </button>
+
+    <div class="lc-toast-container" id="toastContainer"></div>
+
+    <button class="cart-btn-fixed" id="cartFloatBtn">
+      <span>🛒 Cart</span>
+      <span class="cart-count">0</span>
     </button>
 
     <script src="script.js"></script>
