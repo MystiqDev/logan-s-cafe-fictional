@@ -325,10 +325,20 @@ nav ul li a {
   padding: 0 16px;
   height: 100%;
   position: relative;
-  transition: color var(--transition);
+  transition: color var(--transition), background-color var(--transition);
 }
 
-nav ul li a:hover, nav ul li a.active-link { color: var(--amber); }
+nav ul li a:hover {
+  color: rgba(245,239,230,0.96);
+  text-shadow: 0 0 18px rgba(217,182,136,0.28);
+}
+
+nav ul li a.active-link { color: var(--amber); }
+
+nav ul li a.active-link:hover {
+  color: var(--cream);
+  text-shadow: 0 0 18px rgba(217,182,136,0.35);
+}
 
 nav ul li a::after {
   content: "";
@@ -343,12 +353,10 @@ nav ul li a::after {
   border-radius: 2px;
 }
 
-nav ul li a:hover::after,
 nav ul li a.active-link::after { width: 60%; }
 
 header.sticky nav ul li a::after { display: none; }
 header.sticky nav ul li a:hover { background: rgba(217,182,136,0.1); }
-
 .nav-btn {
   display: flex;
   align-items: center;
@@ -417,7 +425,7 @@ header.sticky nav ul li a:hover { background: rgba(217,182,136,0.1); }
   }
 
   nav ul li a::after { display: none; }
-  nav ul li a:hover { background: rgba(217,182,136,0.08); padding-left: 38px; color: var(--white); }
+  nav ul li a:hover { background: rgba(217,182,136,0.08); padding-left: 38px; color: rgba(217,182,136,0.85); }
 
   .nav-btn { width: 100%; padding: 24px 28px; margin-top: 8px; }
   .nav-btn .dy-btn { width: 100%; text-align: center; justify-content: center; display: flex; }
