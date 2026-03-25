@@ -449,6 +449,32 @@ header.sticky nav ul li a:hover { background: rgba(217,182,136,0.1); }
   padding-top: 100px;
 }
 
+.banner .intro > * {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.banner.hero-ready .intro > * {
+  animation: heroFadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.banner.hero-ready .intro > *:nth-child(1) { animation-delay: 0.08s; }
+.banner.hero-ready .intro > *:nth-child(2) { animation-delay: 0.18s; }
+.banner.hero-ready .intro > *:nth-child(3) { animation-delay: 0.3s; }
+.banner.hero-ready .intro > *:nth-child(4) { animation-delay: 0.42s; }
+.banner.hero-ready .intro > *:nth-child(5) { animation-delay: 0.54s; }
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .banner-img {
   position: absolute;
   inset: 0;
@@ -587,9 +613,35 @@ header.sticky nav ul li a:hover { background: rgba(217,182,136,0.1); }
   animation: floatCard 4s ease-in-out infinite;
 }
 
+.banner .hero-float-card,
+.banner .scroll-hint {
+  opacity: 0;
+}
+
+.banner.hero-ready .hero-float-card {
+  animation:
+    heroCardIn 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.48s forwards,
+    floatCard 4s ease-in-out 1.5s infinite;
+}
+
+.banner.hero-ready .scroll-hint {
+  animation: heroFadeUp 0.75s ease 0.9s forwards;
+}
+
 @keyframes floatCard {
   0%, 100% { transform: translateY(0px); }
   50%       { transform: translateY(-12px); }
+}
+
+@keyframes heroCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .hero-float-card img {
@@ -638,6 +690,16 @@ header.sticky nav ul li a:hover { background: rgba(217,182,136,0.1); }
 @media (max-width: 768px) {
   .banner-img { background-attachment: scroll; }
   .hero-float-card { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner .intro > *,
+  .banner .hero-float-card,
+  .banner .scroll-hint {
+    opacity: 1;
+    transform: none;
+    animation: none !important;
+  }
 }
 
 /* Scroll hint */

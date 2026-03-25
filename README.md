@@ -2,7 +2,7 @@
 
 # ☕ Logan'sCafe
 
-### *Your Cozy Corner for Coffee Perfection*
+### *Crafted with care, served with love.*
 
 [![Live Site](https://img.shields.io/badge/Live_Site-Visit-c8702a?style=for-the-badge&logo=googlechrome&logoColor=white)](https://mystiqdev.github.io/logan-s-cafe-fictional/)
 [![GitHub](https://img.shields.io/badge/GitHub-MystiqDev-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MystiqDev)

@@ -2,6 +2,7 @@ window.addEventListener("load", () => {
     setTimeout(() => {
         const loader = document.getElementById("pageLoader");
         if (loader) loader.classList.add("hidden");
+        document.querySelector(".banner")?.classList.add("hero-ready");
     }, 1500);
 });
 
