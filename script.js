@@ -216,7 +216,24 @@ function updateCartBtn() {
     setTimeout(() => btn.classList.remove("bump"), 400);
 }
 
-document.getElementById("cartFloatBtn").addEventListener("click", openCartModal);
+const cartFloatBtn = document.getElementById("cartFloatBtn");
+if (cartFloatBtn) {
+    cartFloatBtn.addEventListener("click", openCartModal);
+}
+
+const heroSection = document.getElementById("home");
+if (heroSection && cartFloatBtn) {
+    const updateCartVisibility = entries => {
+        const [entry] = entries;
+        cartFloatBtn.classList.toggle("is-visible", !entry.isIntersecting);
+    };
+
+    const heroObserver = new IntersectionObserver(updateCartVisibility, {
+        threshold: 0.2
+    });
+
+    heroObserver.observe(heroSection);
+}
 
 function openCartModal() {
     const modal = document.createElement("div");
@@ -337,6 +354,9 @@ function openCardForm(item, qty, isCartCheckout) {
     formEl.innerHTML = `
         <h3>Card Details</h3>
         <p class="cf-sub">Your information is never stored or processed.</p>
+        <div class="cf-demo-warning" role="alert" aria-live="polite">
+            <strong>Demo only.</strong> Do not enter your real card details or personal information in this form.
+        </div>
         <div class="cf-order-summary"><span>${label}</span><strong>$${total}</strong></div>
         <div class="cf-card-icons">
             <div class="cf-card-icon">VISA</div>
